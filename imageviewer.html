@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>  
+<body>
+<h1>Image Slider</h1>
+<h3>Author: Deanna Nguyen</h3>
+
+<script type = "text/javascript">
+  //https://www.geeksforgeeks.org/how-to-zoom-in-and-zoom-out-image-using-javascript/
+  //https://stackoverflow.com/questions/47635341/zooming-in-out-an-image-by-clicking-zoom-buttons-javascript
+    
+  function zoom() {
+    var imgr = document.getElementByID("image");
+    var width = imgr.clientWidth;
+    imgr.style.width = (width + 100)+"px";
+  }
+  
+  function out(){
+    var imgr = document.getElementByID("image");
+    var width = imgr.clientWidth;
+    imgr.style.width = (width - 100)+"px";
+  }
+
+</script>
+
+
+<button type="button" onclick = "zoom()">
+Zoom in
+</button>
+
+<button type="button" onclick = "out()">
+  Zoom out
+</button>
+
+<!--https://www.w3schools.com/howto/howto_js_lightbox.asp-->
+<!--https://placeholder.com/#How_To_Use_Our_Placeholders-->
+<div class="main">
+  <img id="image" src="https://media.geeksforgeeks.org/wp-content/uploads/20190912174307/qwe1.png">
+</div>
+
+</body>
+
+
+</html>
